@@ -1,13 +1,18 @@
 package com.nandha.TodoApplication.Todo;
 
 import java.time.LocalDate;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 
 import jakarta.validation.constraints.Size;
 
 
-
+@Entity
 public class Todo{
-
+	public  Todo() {
+		
+	}
 public Todo(int id, String username, String description, LocalDate targetDate, boolean done) {
 	super();
 	this.id = id;
@@ -16,9 +21,9 @@ public Todo(int id, String username, String description, LocalDate targetDate, b
 	this.targetDate = targetDate;
 	this.done = done;
 }
-
+@Id
+@GeneratedValue
 private int id;
-
 private String username;
 @Size(min=10,message="Enter atleast 10 characters")
 private String description;
