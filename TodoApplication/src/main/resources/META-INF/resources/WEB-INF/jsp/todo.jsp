@@ -25,6 +25,9 @@
 		<form:input type="hidden" path="id" />
 		
 		<input type="submit" class="btn btn-success" />
+		<input type="reset" class="btn btn-success" />
+		<button class="btn btn-success"><a href="list-todos" style="text-decoration:none;color:white">Cancel</a></button>
+		
 	</form:form>
 
 </div>
